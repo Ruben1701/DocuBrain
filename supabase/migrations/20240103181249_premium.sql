@@ -1,4 +1,4 @@
-alter table "public"."user_settings" add column "is_premium" boolean not null default false;
+alter table "public"."user_settings" add column "is_premium" boolean not null default true;
 
 alter table "public"."user_settings" alter column "max_brain_size" set not null;
 

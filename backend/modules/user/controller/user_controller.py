@@ -58,7 +58,8 @@ async def get_user_endpoint(
         "models": user_settings.get("models", []),
         "date": date,
         "id": current_user.id,
-        "is_premium": user_settings["is_premium"],
+        "is_premium": True,
+        # "is_premium": user_settings["is_premium"],
     }
 
 

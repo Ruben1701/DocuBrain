@@ -1,9 +1,7 @@
-from ast import List
 from datetime import datetime, timedelta
 from uuid import UUID
 
 from logger import get_logger
-from models.databases.entity import LLMModels
 from models.databases.repository import Repository
 
 logger = get_logger(__name__)
@@ -157,7 +155,7 @@ class UserUsage(Repository):
                 self.db.table("user_settings").update({"is_premium": False}).match(
                     {"user_id": str(user_id)}
                 ).execute()
-                return False, False
+                return True, False
 
         except Exception as e:
             logger.info(matching_customers)
@@ -193,7 +191,8 @@ class UserUsage(Repository):
 
         user_settings = user_settings_response[0]
 
-        check_is_premium, error = self.check_if_is_premium_user(user_id)
+        # check_is_premium, error = self.check_if_is_premium_user(user_id)  old premioum check
+        check_is_premium, error = True, False
 
         if check_is_premium and not error:
             # get the possibly updated user settings

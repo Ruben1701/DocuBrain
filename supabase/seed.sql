@@ -244,7 +244,7 @@ INSERT INTO "public"."user_daily_usage" ("user_id", "email", "date", "daily_requ
 --
 
 INSERT INTO "public"."user_settings" ("user_id", "models", "max_brains", "max_brain_size", "is_premium", "api_access", "monthly_chat_credit") VALUES
-	('39418e3b-0258-4452-af60-7acfcc1263ff', '["gpt-3.5-turbo-1106"]', 3, 50000000, false, false, 100);
+	('39418e3b-0258-4452-af60-7acfcc1263ff', '["gpt-3.5-turbo-1106"]', 3, 50000000, true, true, 1000);
 
 
 --

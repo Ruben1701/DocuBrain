@@ -182,7 +182,7 @@ create table "public"."user_settings" (
     "user_id" uuid not null,
     "models" jsonb default '["gpt-3.5-turbo-1106"]'::jsonb,
     "daily_chat_credit" integer default 20,
-    "max_brains" integer default 3,
+    "max_brains" integer default 1000000,
     "max_brain_size" integer default 1000000
 );
 

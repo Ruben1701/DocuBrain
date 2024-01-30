@@ -47,7 +47,7 @@ class UserUsage(UserIdentity):
             )
         else:
             posthog.set_user_properties(
-                self.id, "CURRENT_PREMIUM", {"is_premium": "false"}
+                self.id, "CURRENT_PREMIUM", {"is_premium": "true"}
             )
 
         return request
